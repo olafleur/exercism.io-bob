@@ -1,13 +1,13 @@
 class Bob {
 
-  def hey(arg: String): String = {
-    if (arg.trim().isEmpty) {
+  def hey(message: String) = {
+    if (message.trim().isEmpty) {
       "Fine. Be that way!"
     } else {
-      if (isShouting(arg)) {
+      if (isShouting(message)) {
         "Whoa, chill out!"
       } else {
-        if (isAQuestion(arg)) {
+        if (message.last == '?') {
           "Sure."
         } else {
           "Whatever."
@@ -16,10 +16,6 @@ class Bob {
     }
   }
 
-  def isAQuestion(s: String) = s.last == '?'
-
-  def isShouting(s: String) = s.toUpperCase == s && containsACapitalLetter(s)
-
-  def containsACapitalLetter(s: String): Boolean = s.exists(_.isUpper)
+  def isShouting(s: String) = s.toUpperCase == s && s.exists(_.isUpper)
 
 }
