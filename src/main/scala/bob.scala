@@ -1,13 +1,17 @@
 class Bob {
 
   def hey(arg: String): String = {
-    if (isShouting(arg)) {
-      "Whoa, chill out!"
+    if (arg.isEmpty) {
+      "Fine. Be that way!"
     } else {
-      if (isAQuestion(arg)) {
-        "Sure."
+      if (isShouting(arg)) {
+        "Whoa, chill out!"
       } else {
-        "Whatever."
+        if (isAQuestion(arg)) {
+          "Sure."
+        } else {
+          "Whatever."
+        }
       }
     }
   }
