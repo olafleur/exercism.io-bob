@@ -1,7 +1,7 @@
 class Bob {
 
   def hey(arg: String): String = {
-    if (arg.isEmpty) {
+    if (arg.trim().isEmpty) {
       "Fine. Be that way!"
     } else {
       if (isShouting(arg)) {
