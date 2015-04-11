@@ -1,9 +1,12 @@
 class Bob {
+
+  def isShouting(s: String) = s.toUpperCase == s
+
   def hey(arg: String): String = {
-    if(arg.charAt(0) == 'T') {
-      "Whatever."
-    } else {
+    if(isShouting(arg)) {
       "Whoa, chill out!"
+    } else {
+      "Whatever."
     }
   }
 
