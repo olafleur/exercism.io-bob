@@ -14,7 +14,6 @@ class BobSpecs extends FlatSpec with Matchers {
   }
 
   it should "respond to questions" in {
-    pending
     val response = teenager.hey("Does this cryogenic chamber make me look fat?")
     response should be ("Sure.")
   }
