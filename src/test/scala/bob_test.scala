@@ -19,19 +19,16 @@ class BobSpecs extends FlatSpec with Matchers {
   }
 
   it should "allow questions to end with numbers" in {
-    pending
     val response = teenager.hey("You are what, like 15?")
     response should be ("Sure.")
   }
 
   it should "respond to talking forcefully" in {
-    pending
     val response = teenager.hey("Let's go work out at the gym!")
     response should be ("Whatever.")
   }
 
   it should "allow acroynms in regular speech" in {
-    pending
     val response = teenager.hey("It's OK if you don't want to go to the DMV.")
     response should be ("Whatever.")
   }
