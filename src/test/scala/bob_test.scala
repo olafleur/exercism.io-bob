@@ -34,19 +34,16 @@ class BobSpecs extends FlatSpec with Matchers {
   }
 
   it should "see forceful questions as shouting" in {
-    pending
     val response = teenager.hey("WHAT THE HELL WERE YOU THINKING?")
     response should be ("Whoa, chill out!")
   }
 
   it should "allow numbers when shouting" in {
-    pending
     val response = teenager.hey("1, 2, 3, GO!")
     response should be ("Whoa, chill out!")
   }
 
   it should "see only numbers as speech" in {
-    pending
     val response = teenager.hey("1, 2, 3")
     response should be ("Whatever.")
   }

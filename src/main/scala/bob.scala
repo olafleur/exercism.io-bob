@@ -1,9 +1,5 @@
 class Bob {
 
-  def isShouting(s: String) = s.toUpperCase == s
-
-  def isAQuestion(s: String) = s.last == '?'
-
   def hey(arg: String): String = {
     if (isShouting(arg)) {
       "Whoa, chill out!"
@@ -15,5 +11,11 @@ class Bob {
       }
     }
   }
+
+  def isAQuestion(s: String) = s.last == '?'
+
+  def isShouting(s: String) = s.toUpperCase == s && containsACapitalLetter(s)
+
+  def containsACapitalLetter(s: String): Boolean = s.exists(_.isUpper)
 
 }
